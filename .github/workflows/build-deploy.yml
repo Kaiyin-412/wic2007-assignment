@@ -1,9 +1,9 @@
 name: build-deploy
-on: push
+on: [workflow_dispatch,push]
 jobs: 
   build:
     runs-on: ubuntu-latest
-    default:
+    defaults:
       runs:
         working-directory: ./codeshield
     steps: 
