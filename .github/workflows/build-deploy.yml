@@ -44,6 +44,8 @@ jobs:
           node-version: '22.x'
       - name: Configure github pages
         uses: actions/configure-pages@v3
+        with:
+          static_site_generator: next
       - run: npm ci
       # build the server
       - run: npm run build
