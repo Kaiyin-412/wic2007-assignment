@@ -34,6 +34,7 @@ jobs:
         with:
           node-version: '22.x'
           cache: 'npm'
+          cache-dependency-path: './codeshield/package-lock.json'
       - run: npm ci
       # build the server
       - run: npm run build
